@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Daiker&#39;s Blog</title>
+    <title>tags | Daiker&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Daiker0330">
@@ -13,12 +13,13 @@
     
     <meta name="description">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Daiker's Blog">
-<meta property="og:url" content="http://daiker0330.github.io/index.html">
+<meta property="og:title" content="tags">
+<meta property="og:url" content="http://daiker0330.github.io/tags/index.html">
 <meta property="og:site_name" content="Daiker's Blog">
 <meta property="og:description">
+<meta property="og:updated_time" content="2015-07-27T01:58:08.777Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Daiker's Blog">
+<meta name="twitter:title" content="tags">
 <meta name="twitter:description">
 
     
@@ -34,9 +35,9 @@
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 
-  <body>
-    <header>
-      
+    <body>
+      <header>
+        
 <div>
 		
 			<div id="imglogo">
@@ -75,117 +76,28 @@
 				</ul>
 			</nav>			
 </div>
-    </header>
-    <div id="container">
-      <div id="main">
+      </header>
+      <div id="container">
+          
+<div class="archive-title" >
+<h2 class="tag-icon">标签</h2>
 
-  
-<section class="post" itemscope itemprop="blogitem">
-  
-    <a href="/2015/07/27/设计模式/" title="设计模式" itemprop="url">
-  
-    <h1 itemprop="name">设计模式</h1>
-    
-     
-      <p itemprop="description" >设计模式读书笔记</p>
-      
-    
-    <time datetime="2015-07-27T01:41:51.000Z" itemprop="datePublished">2015-07-27</time>
-  </a>
-</section>
+<a data-src="/tags/编程/" href="#编程" title="编程">编程<sup>1</sup></a>
 
+<a data-src="/tags/设计模式/" href="#设计模式" title="设计模式">设计模式<sup>1</sup></a>
 
-
-
-
-
-  
-<section class="post" itemscope itemprop="blogitem">
-  
-    <a href="/2015/07/26/HelloWorld/" title="HelloWorld" itemprop="url">
-  
-    <h1 itemprop="name">HelloWorld</h1>
-    
-     
-           <p itemprop="description" >Hello BlogThis is the first page of my Blog.
-Writing 1,000 words a day to change my life!</p>
-        
-    
-    <time datetime="2015-07-26T14:39:09.000Z" itemprop="datePublished">2015-07-26</time>
-  </a>
-</section>
-
-
-
-
-
-
+<a data-src="/tags/读书笔记/" href="#读书笔记" title="读书笔记">读书笔记<sup>1</sup></a>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
-<aside class="clearfix">
-
-  
-<div class="categorieslist">
-	<p class="asidetitle">分类</p>
-		<ul>
-		
-		  
-			<li><a href="/categories/读书笔记/" title="读书笔记">读书笔记<sup>1</sup></a></li>
-		  
-		
-		</ul>
+<div id="main" class="archive-part">
+<div class="all-list-box"></div>
 </div>
 
 
-  
-<div class="tagslist">
-	<p class="asidetitle">标签</p>
-		<ul class="clearfix">
-		
-			
-				<li><a href="/tags/读书笔记/" title="读书笔记">读书笔记<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/设计模式/" title="设计模式">设计模式<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/编程/" title="编程">编程<sup>1</sup></a></li>
-			
-		
-		</ul>
-</div>
 
 
-  <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
-    <ul>
-        
-          <li>
-            
-            	<a href="https://github.com/daiker0330" target="_blank" title="My Github">My Github</a>
-            
-          </li>
-        
-    </ul>
-</div>
-
-  
-
-
-  <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
-</div>
-
-</aside>
-</div>
-    </div>
-    <footer><div id="footer" >
+      </div>
+      <footer><div id="footer" >
 	
 	<div class="line">
 		<span></span>
@@ -222,7 +134,7 @@ Writing 1,000 words a day to change my life!</p>
 		</p>
 </div>
 </footer>
-    <script src="/js/jquery-2.0.3.min.js"></script>
+      <script src="/js/jquery-2.0.3.min.js"></script>
 <script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
 <script src="/js/jquery.qrcode-0.12.0.min.js"></script>
@@ -280,6 +192,24 @@ $(document).ready(function(){
 
 
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var list    = $('.archive-title a'),
+      box     = $('.all-list-box'),
+      first   = $('.archive-title a:first-of-type');
+      box.load(first.attr('data-src').toString()+' #archive-page');
+      first.addClass('current');
+  list.each(function(){
+    $(this).click(function(){
+      var listSrc=$(this).attr('data-src').toString()+' #archive-page';
+      box.load(listSrc);
+      list.removeClass('current');
+      $(this).addClass('current');
+     });  
+    });
+  }); 
+</script>
+
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
@@ -331,5 +261,5 @@ $(document).ready(function(){
 
 <!-- Tiny_search End -->
 
-  </body>
- </html>
+    </body>
+   </html>
